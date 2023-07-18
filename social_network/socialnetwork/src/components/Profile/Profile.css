@@ -1,0 +1,94 @@
+.Content {
+  grid-area: contentik;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.content p {
+  color: #000000;
+}
+
+.main-image {
+  height: 350px;
+  width: 100%;
+}
+
+.about_img {
+  width: 150px;
+  height: 150px;
+}
+
+.about {
+  display: flex;
+}
+
+.about_body {
+  margin: 0 0 0 20px;
+}
+
+.info ul li {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.post_title p {
+  font-size: 30px;
+}
+
+.input textarea {
+  width: 99%;
+  height: 60px;
+  border: 1px solid black;
+  transition: 0.2s;
+}
+
+.input input:hover {
+  background-color: #ececec;
+  transition: 0.2s;
+}
+
+.send {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 0 0;
+}
+
+.send button {
+  background-color: #ffffff;
+  border: 1px solid black;
+  transition: 0.2s;
+  font-size: 18px;
+}
+
+.send button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.Posts {
+  margin: 0 0 0 20px;
+}
+
+.Posts li {
+  font-size: 24px;
+  
+}
+.post {
+  font-family: 'Crimson Text', serif;  font-size: 20px;
+}
+.post span {
+  color: red;
+}
+.Posts span:hover {
+  cursor: pointer;
+}
+
+.circle {
+  width: 30px;
+  position: relative;
+  top: 7px;
+  margin-right: 10px;
+}

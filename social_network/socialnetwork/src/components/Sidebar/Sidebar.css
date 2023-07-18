@@ -1,0 +1,47 @@
+ul li {
+  color: #000000;
+}
+
+.Sidebar {
+  grid-area: sidebar;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+}
+
+.Sidebar ul a {
+  list-style: none;
+  text-decoration: none;
+  color: #908d8d;
+  padding-left: 10%;
+  font-size: 24px;
+}
+
+.Sidebar ul a.active {
+  color: #000000;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.friends_title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.friends_items {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.friends_item img {
+  width: 50px;
+  border-radius: 70%;
+}
+
+
+ul a:hover {
+  text-decoration: underline;
+  transition: 0.4 s;
+}

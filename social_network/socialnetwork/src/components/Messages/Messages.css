@@ -1,0 +1,6 @@
+.Messages {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    height: 100%;
+}

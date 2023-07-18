@@ -1,0 +1,27 @@
+.avatar img {
+    width: 60px;
+    display: block;
+    margin-bottom: -20px;
+}
+.avatar {
+font-weight: 700;
+margin-right: 20px;
+text-align: center;
+}
+.chat {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100%;
+    padding: 5px 0 5px 0;
+}
+.chat_item {
+    display: flex;
+    text-align:justify;
+    align-items: center;
+}
+.Message {
+    padding: 0 10px;
+    margin: 10px;
+    border: 2px solid rgb(93, 90, 90);
+    border-radius: 15px;
+}
