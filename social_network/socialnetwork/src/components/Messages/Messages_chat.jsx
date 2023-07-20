@@ -5,7 +5,6 @@ import ChatItemMe from "./Message_chat_Me";
 import { addMessageActionCreator } from "../../redux/messages_reducer";
 import { onMessageChangeActionCreator } from "../../redux/messages_reducer";
 
-
 const Chat = (props) => {
 
   let dialogsElements = props.chatData.map((Message) => {

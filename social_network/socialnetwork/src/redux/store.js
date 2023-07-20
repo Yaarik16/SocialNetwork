@@ -8,7 +8,6 @@ import sidebarReducer from './sidebar_reducer';
 
 
 
-
 let store = {
     _state: {
         sideBar: {
@@ -79,7 +78,6 @@ let store = {
         this._state.profilePage = profileReducer(this._state.profilePage, action);
         this._state.messagePage = messagesReducer(this._state.messagePage, action); 
         this._state.sideBar = sidebarReducer(this._state.sideBar, action); 
-
         this._rerenderEntireTree(this._state);
     },
 }
