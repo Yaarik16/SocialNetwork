@@ -1,19 +1,19 @@
 import React from 'react';
 import Mainphoto from './Profile_main_photo'
 import About from './Profile_about'
-import Postform from './Profile_post_form'
-import Posts from './Profile_posts'
+import PostformContainer from './Profile_post_form'
+import PostsContainer from './Profile_posts'
 import './Profile.css'
+import store from '../../redux/store';
 
 const Profile = (props) => {
-  
 
   return (
     <main >
       <Mainphoto />
       <About lastname='Valuevich' />
-      <Postform newPostText={props.newPostText} dispatch={props.dispatch} />
-      <Posts postData={props.postData} />
+      <PostformContainer store={store} />
+      <PostsContainer store={store} />
     </main>
   );
 }

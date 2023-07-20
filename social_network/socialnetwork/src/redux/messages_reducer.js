@@ -51,16 +51,20 @@ const messagesReducer = (state = initialState, action) => {
             }
             state.chatData.push(newMessage);
             state.newMessageText = '';
+            return state;
         case UPDATE_NEW_MESSAGE_TEXT:
             state.newMessageText = action.newText;
+            return state;
         case ADD_FRIEND:
             let newFriend = {
                 name: action.friendName, road: `/${action.friendName}`
             }
             state.contactsData.push(newFriend);
             state.newFriendName = '';
+            return state;
         case UPDATE_NEW_FRIEND_NAME:
             state.newFriendName = action.newName;
+            return state;
         default:
             return state;
     }

@@ -1,17 +1,15 @@
 import React from "react";
-import { addPostActionCreator } from "../../redux/profile_reducer";
-import { updateNewPostTextActionCreator } from "../../redux//profile_reducer";
+
 
 const Postform = (props) => {
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+  let onAddPost = () => {
+    props.addPost();
   }
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = updateNewPostTextActionCreator(text);
-    props.dispatch(action);
+    props.updateNewPostText(text);
   }
 
   return (
@@ -23,7 +21,7 @@ const Postform = (props) => {
         <textarea onChange={onPostChange} ref={newPostElement} placeholder='Your new post' value={props.newPostText} />
       </div>
       <div className='send'>
-        <button onClick={addPost} type='submit'>Add post</button>
+        <button onClick={onAddPost} type='submit'>Add post</button>
       </div>
       <hr />
     </div>
