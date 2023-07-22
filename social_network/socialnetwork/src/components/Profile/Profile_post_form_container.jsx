@@ -5,7 +5,6 @@ import Postform from "./Profile_post_form";
 
 
 const PostformContainer = (props) => {
-  debugger;
   let state = props.store.getState();
 
 

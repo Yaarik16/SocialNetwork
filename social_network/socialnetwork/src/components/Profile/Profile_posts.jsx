@@ -2,7 +2,6 @@ import React from "react";
 import Post from "./Profiel_Post";
 
 
-
 const Posts = (props) => {
 
 

@@ -2,11 +2,10 @@ import React from "react"
 import './Messages.css'
 import './Messages_contacts.css'
 import MessagesTitle from "./Messages_title"
-import MessagesContacts from "./Messages_item"
-import Chat from "./Messages_chat"
+import MessagesContactsContainer from "./Messages_contacts_container"
+import ChatContainer from "./Messages_chat_container"
 
 const Messages = (props) => {
-
 
     return (
         <div>
@@ -14,10 +13,10 @@ const Messages = (props) => {
             <div className='Messages'>
                 <div className="Contacts">
                     <div className='contacts'>
-                    <MessagesContacts contactsData={props.contactsData} dispatch={props.dispatch} newFriendName={props.newFriendName}/>
+                    <MessagesContactsContainer store={props.store}/>
                     </div>
                 </div>
-                <Chat chatData={props.chatData} dispatch={props.dispatch} newMessageText={props.newMessageText} />
+                <ChatContainer store={props.store}/>
             </div>
         </div>
     );

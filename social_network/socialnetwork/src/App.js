@@ -9,8 +9,8 @@ import Music from './components/Music/Music';
 import Options from './components/Options/Options'
 import Lenta from './components/Lenta/lenta';
 import { Route, Routes } from 'react-router-dom';
-
 const App = (props) => {
+  
   return (
       <div className='app-wrapper'>
         <Header />
@@ -18,8 +18,8 @@ const App = (props) => {
         <div className='Content'>
           <Routes>
             <Route path='' element={<Lenta />} />
-            <Route path='/Profile' element={<Profile postData={props.state.profilePage.postsData} dispatch={props.dispatch} newPostText = {props.state.profilePage.newPostText} />} />
-            <Route path='/Messages' element={<Messages contactsData={props.state.messagePage.contactsData} chatData={props.state.messagePage.chatData} dispatch={props.dispatch} newFriendName = {props.state.messagePage.newFriendName} newMessageText = {props.state.messagePage.newMessageText}/>} />
+            <Route path='/Profile' element={<Profile store={props.store} />} />
+            <Route path='/Messages' element={<Messages store={props.store} contactsData={props.state.messagePage.contactsData} chatData={props.state.messagePage.chatData} dispatch={props.dispatch} newFriendName = {props.state.messagePage.newFriendName} newMessageText = {props.state.messagePage.newMessageText}/>} />
             <Route path='/New' element={<New />} />
             <Route path='/Music' element={<Music />} />
             <Route path='/Options' element={<Options />} />
