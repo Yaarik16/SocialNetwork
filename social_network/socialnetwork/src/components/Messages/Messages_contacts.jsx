@@ -10,10 +10,14 @@ const MessagesContacts = (props) => {
 
     let addNewFriend = () => {
         let name = newFriend.current.value;
-        props.onAddFriend(name);
-
+        debugger;
+        if (name === '') {
+            alert('You can\'t submit empty field')
+        } else {
+            props.onAddFriend(name);
+        }
     }
-
+    
     let onNameChange = () => {
         let name = newFriend.current.value;
         props.onNameChange(name);
@@ -22,6 +26,7 @@ const MessagesContacts = (props) => {
     let contactsItem = props.state.messagePage.contactsData.map((Contact) => {
         return <ContactItem name={Contact.name} road={Contact.road} />
     });
+    debugger;
 
     return (
         <div className='contacts_items'>

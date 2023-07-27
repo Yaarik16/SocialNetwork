@@ -13,7 +13,7 @@ const Messages = (props) => {
             <div className='Messages'>
                 <div className="Contacts">
                     <div className='contacts'>
-                    <MessagesContactsContainer store={props.store}/>
+                    <MessagesContactsContainer />
                     </div>
                 </div>
                 <ChatContainer store={props.store}/>

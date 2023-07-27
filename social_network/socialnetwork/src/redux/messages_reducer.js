@@ -56,11 +56,9 @@ const messagesReducer = (state = initialState, action) => {
             state.newMessageText = action.newText;
             return state;
         case ADD_FRIEND:
-            let newFriend = {
-                name: action.friendName, road: `/${action.friendName}`
-            }
-            state.contactsData.push(newFriend);
-            state.newFriendName = '';
+            let friend = action.newFriendName;
+            state.contactsData.push({name:friend, road:`/${friend}`});
+            action.newFriendName = '';
             return state;
         case UPDATE_NEW_FRIEND_NAME:
             state.newFriendName = action.newName;
@@ -73,7 +71,7 @@ const messagesReducer = (state = initialState, action) => {
 export const addNewFriendActionCreator = (name) => {
     return {
         type: ADD_FRIEND,
-        friendName: name,
+        newFriendName: name
     }
 }
 
