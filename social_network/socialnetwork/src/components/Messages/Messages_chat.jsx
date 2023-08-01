@@ -15,7 +15,11 @@ const Chat = (props) => {
 
   let addMessage = () => {
     let text = newMessage.current.value;
-    props.onAddMessage(text);
+    if (text === '') {
+      alert('You can\'t submit empty field')
+    } else {
+      props.onAddMessage(text);
+    }
   }
 
   let onMessageChange = () => {
@@ -26,8 +30,8 @@ const Chat = (props) => {
   return (
     <div className='chat'>
       {dialogsElements}
-      <textarea onChange={onMessageChange} ref={newMessage} placeholder="Your message" value={props.newMessageText} />
-      <button onClick={addMessage} type="submit">Send message</button>
+      <textarea onChange={onMessageChange} className='textarea' ref={newMessage} placeholder="Enter your message" value={props.state.messagePage.newMessageText} />
+      <button onClick={addMessage} className='textarea' type="submit">Send message</button>
     </div>
   );
 }

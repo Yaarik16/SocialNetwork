@@ -19,6 +19,9 @@ text-align: center;
     text-align:justify;
     align-items: center;
 }
+.chat .textarea {
+    width: 100vh;
+}
 .Message {
     padding: 0 10px;
     margin: 10px;

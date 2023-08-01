@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 let mapStateToProps = (state) => {
     return {
         state: state,
-        newFriendName: state.newFriendName
     }
 }
 

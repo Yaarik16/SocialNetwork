@@ -23,7 +23,7 @@ let store = {
                 { id: 2, post: 'Whhoooah, new year coming!!!', likes: '42' },
                 { id: 3, post: 'First day after new year!!', likes: '27' },
             ],
-            newPostText: 'cxvcxvxcv'
+            newPostText: ''
         },
         messagePage: {
             contactsData: [

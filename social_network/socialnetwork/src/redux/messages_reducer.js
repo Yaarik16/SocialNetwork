@@ -40,33 +40,42 @@ let initialState = {
 
     ],
     newMessageText: '',
-    newFriendName: ''
+    newFriendName: '',
 };
 const messagesReducer = (state = initialState, action) => {
-
     switch (action.type) {
-        case ADD_MESSAGE:
-            let newMessage = {
-                name: 'Sasha', text: state.newMessageText
-            }
-            state.chatData.push(newMessage);
-            state.newMessageText = '';
-            return state;
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newText;
-            return state;
-        case ADD_FRIEND:
-            let friend = action.newFriendName;
-            state.contactsData.push({name:friend, road:`/${friend}`});
-            action.newFriendName = '';
-            return state;
-        case UPDATE_NEW_FRIEND_NAME:
-            state.newFriendName = action.newName;
-            return state;
-        default:
-            return state;
+      case ADD_MESSAGE:
+        return {
+          ...state,
+          chatData: [
+            ...state.chatData,
+            { name: 'Sasha', text: state.newMessageText }
+          ],
+          newMessageText: ''
+        };
+      case ADD_FRIEND:
+        return {
+          ...state,
+          contactsData: [
+            ...state.contactsData,
+            { name: state.newFriendName, road: `/${state.newFriendName}` }
+        ],
+        newFriendName: '',
+    };
+      case UPDATE_NEW_FRIEND_NAME:
+        return {
+          ...state,
+          newFriendName: action.newName
+        };
+      case UPDATE_NEW_MESSAGE_TEXT:
+        return {
+          ...state,
+          newMessageText: action.newText
+        };
+      default:
+        return state;
     }
-}
+  };
 
 export const addNewFriendActionCreator = (name) => {
     return {

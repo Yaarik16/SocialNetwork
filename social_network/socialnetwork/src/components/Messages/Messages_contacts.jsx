@@ -26,11 +26,11 @@ const MessagesContacts = (props) => {
     let contactsItem = props.state.messagePage.contactsData.map((Contact) => {
         return <ContactItem name={Contact.name} road={Contact.road} />
     });
-    debugger;
+
 
     return (
         <div className='contacts_items'>
-            <input onChange={onNameChange} ref={newFriend} value={props.newFriendName} placeholder='Type the name ' />
+            <input onChange={onNameChange} ref={newFriend} value={props.state.messagePage.newFriendName} placeholder='Enter the name ' />
             <button onClick={addNewFriend} type="button">Add new friend</button>
             {contactsItem}
         </div>

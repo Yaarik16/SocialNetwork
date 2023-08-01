@@ -18,7 +18,7 @@ const Postform = (props) => {
         <p>My posts</p>
       </div>
       <div className='input'>
-        <textarea onChange={onPostChange} ref={newPostElement} placeholder='Your new post' value={props.newPostText} />
+        <textarea onChange={onPostChange} ref={newPostElement} placeholder='Your new post' value={props.state.profilePage.newPostText} />
       </div>
       <div className='send'>
         <button onClick={onAddPost} type='submit'>Add post</button>
